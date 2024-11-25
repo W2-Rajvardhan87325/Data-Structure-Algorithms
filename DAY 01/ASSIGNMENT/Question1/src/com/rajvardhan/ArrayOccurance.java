@@ -10,13 +10,12 @@ import java.util.Scanner;
 public class ArrayOccurance {
 
 	public static int linearSearch(int arr[], int element) {
-		int lastIndex=-1;
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = arr.length-1; i >=0; i++) {
 			if(arr[i]==element) {
-				lastIndex=i;
+				return i;
 			}	
 		}
-		return lastIndex;
+		return -1;
 	}
 	
 	public static void main(String[] args) {
